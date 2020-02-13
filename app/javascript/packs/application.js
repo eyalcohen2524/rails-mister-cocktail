@@ -18,6 +18,7 @@
 console.log('Hello World from Webpacker')
 
 import 'select2/dist/css/select2.css';
+import 'bootstrap';
 
 import { sexy } from '../components/sexy';
 
