@@ -1,3 +1,43 @@
+<header>
+  <nav>
+    <div id="brand">
+      <div id="logo"></div>
+      <div id="word-mark"></div>
+    </div>
+    <div id="menu">
+      <div id="menu-toggle">
+        <div id="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <ul>
+        <% @cocktails.each_with_index do |cocktail, index| %>
+        <li><a href="#section0<%=index%>"></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+  <div id="hero-section">
+    <div id="head-line"></div>
+  </div>
+</header>
+  <% @cocktails.each_with_index do |cocktail, index| %>
+    <section id="section0<%=index%>">
+  <div class="centerer">
+    <div id="heading"></div>
+  </div>
+    </div>
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+        <div class="container">
+          <h1> <%= cocktail.name %> </h1>
+        </div>
+      </div>
+    </section>
+  <% end %>
+</section><a href="https://youtu.be/m1IU7zjl1k4" id="youtube"><i class="fa fa-youtube-play"></i></a>
+
 
 <h1>Concotions</h1>
   <ul>

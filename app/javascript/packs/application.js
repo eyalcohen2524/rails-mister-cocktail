@@ -16,3 +16,9 @@
 // const imagePath = (name) => images(name, true)
 
 console.log('Hello World from Webpacker')
+
+import 'select2/dist/css/select2.css';
+
+import { sexy } from '../components/sexy';
+
+initSelect2();

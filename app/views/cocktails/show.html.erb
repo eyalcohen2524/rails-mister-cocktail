@@ -1,11 +1,69 @@
-<h1><%= @cocktail.name %></h1>
+<header>
+  <nav>
+    <div id="brand">
+      <div id="logo"></div>
+      <div id="word-mark"></div>
+    </div>
+    <div id="menu">
+      <div id="menu-toggle">
+        <div id="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <ul>
+        <li><a href="#section00"></a></li>
+        <li><a href="#section01"></a></li>
+        <li><a href="#section02"></a></li>
+        <li><a href="#section03"></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="hero-section">
+    <div id="head-line"></div>
+  </div>
+</header>
+<section id="section00">
+  <div id="heading"></div>
+  <h1> <%= @cocktail.name %> </h1>
+</div>
+</section>
+<section id="section01">
+  <div id="heading"></div>
+</section>
+<section id="section02">
+  <div id="heading"></div>
+</section>
+<section id="section03">
+  <div id="heading"></div>
+</section><a href="https://youtu.be/m1IU7zjl1k4" id="youtube"><i class="fa fa-youtube-play"></i></a>
 
-<% @cocktail.doses.each do |dose| %>
+<div class="cards">
+  <%@cocktail.doses.each do |dose| %>
+  <div class="card">
   <h3> <%= dose.ingredient.name %>: <%= dose.description %></h3>
-  <p> <%= link_to cocktail_dose_destroy(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+  <p> <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } do %>
       <div class="delete-button">Delete</div></p>
+  </div>
   <% end %>
 <% end %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :ingredient_id , collection: Ingredient.all, input_html: { class: 'select2' }, include_hidden: false  %>
+        <%= f.input :description %>
+        <%= f.submit "add a dose", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail)%>
