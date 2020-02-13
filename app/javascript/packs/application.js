@@ -22,4 +22,3 @@ import 'bootstrap';
 
 import { sexy } from '../components/sexy';
 
-initSelect2();

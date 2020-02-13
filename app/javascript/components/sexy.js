@@ -1,4 +1,4 @@
-$(sexy)( () => {
+const sexy = () => {
 
   //On Scroll Functionality
   $(window).scroll( () => {
@@ -33,5 +33,5 @@ $(sexy)( () => {
     });
   });
 
-});
+};
 export { sexy };
