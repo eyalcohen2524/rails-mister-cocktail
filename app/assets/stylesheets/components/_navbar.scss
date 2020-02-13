@@ -17,14 +17,7 @@
   height: $height;
   background: $bg;
 }
-@mixin transPos($top, $right, $bottom, $left,$transX,$transY) {
-  position: absolute;
-  top: $top;
-  left: $left;
-  right: $right;
-  bottom: $bottom;
-  transform: translate($transX, $transY);
-}
+
 * {
   box-sizing: border-box;
   margin: 0;
