@@ -12,36 +12,30 @@
           <div class="bar"></div>
         </div>
       </div>
-      <ul>
-        <li><a href="#section00"></a></li>
-        <li><a href="#section01"></a></li>
-        <li><a href="#section02"></a></li>
-        <li><a href="#section03"></a></li>
-      </ul>
     </div>
   </nav>
-  <div id="hero-section">
-    <div id="head-line"></div>
-  </div>
 </header>
-<section id="section00">
   <div id="heading"></div>
   <h1> <%= @cocktail.name %> </h1>
 </div>
-</section>
-<section id="section01">
+  <section id="section0<%=@cocktail.id%>">
+<div class="centerer">
   <div id="heading"></div>
-</section>
-<section id="section02">
-  <div id="heading"></div>
-</section>
-<section id="section03">
-  <div id="heading"></div>
-</section><a href="https://youtu.be/m1IU7zjl1k4" id="youtube"><i class="fa fa-youtube-play"></i></a>
+</div>
+  </div>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key %>')">
+        <h1> <%= @cocktail.name %></h1>
+      <div class="container">
+      </div>
+    </div>
+  </section>
+
+
+
 
 <div class="cards">
   <%@cocktail.doses.each do |dose| %>
-  <div class="card">
+  <div class="card" style="background-color: black">
   <h3> <%= dose.ingredient.name %>: <%= dose.description %></h3>
   <p> <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: "Are you sure?" } do %>
       <div class="delete-button">Delete</div></p>

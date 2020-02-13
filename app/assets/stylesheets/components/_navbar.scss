@@ -52,7 +52,6 @@ $accent: #fff;
 
 /*** Header Styles ***/
 header {
-  @include object(100vw,100vh,$header-bg);
   display: flex;
 }
 
@@ -152,9 +151,9 @@ li {
 
 /*** Hero Section Styles ***/
 #hero-section {
-  @include object(100vw,calc(100vh - 160px),null);
-  @include center;
   margin-top: 160px;
+  width: 100vw;
+  background-image: url('https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/1034688/910/607/m1/fpnw/wm0/retro-cocktails-.jpg?1456647835&s=1f98a4e2ff6936fd220763a5b816579c')
 }
 
 #head-line {
@@ -186,7 +185,6 @@ section {
   @include object(100vw,calc(100vh - 100px),null);
   &:nth-child(odd) {
     background: $pink;
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://digitalblasphemy.com/graphics/fbt/dispersionfbt.jpg);
   }
   &:nth-child(even) {
     background: $aqua;
@@ -211,6 +209,35 @@ section {
       font-size: 32px;
       font-weight: bold;
     }
+
+}
+    .banner h1 a {
+      text-decoration: none;
+      margin: 0;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+#piece-of-shit a {
+  text-decoration: none !important;
+  a:hover{
+    color: white !important;
+  }
+}
+
+span a {
+  text-decoration: none;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  a:hover{
+    color: white;
+    text-decoration: none !important;
+  }
 }
 
 #heading {
